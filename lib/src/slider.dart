@@ -1029,9 +1029,12 @@ class _SfSliderState extends State<SfSlider> with TickerProviderStateMixin {
       activeTrackColor: widget.activeColor ??
           sliderThemeData.activeTrackColor ??
           themeData.primaryColor,
-      thumbColor: widget.activeColor ??
-          sliderThemeData.thumbColor ??
-          themeData.primaryColor,
+      // thumbColor: widget.activeColor ??
+      //     sliderThemeData.thumbColor ??
+      //     themeData.primaryColor,
+      thumbColor: sliderThemeData.thumbColor ??
+          widget.activeColor ??
+          themeData.colorScheme.primary,
       activeTickColor: sliderThemeData.activeTickColor,
       inactiveTickColor: sliderThemeData.inactiveTickColor,
       disabledActiveTickColor: sliderThemeData.disabledActiveTickColor,
